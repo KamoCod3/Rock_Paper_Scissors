@@ -2,13 +2,13 @@
 
 /*
 make a function to generate computer choice "getComputerChoice"
-get a random choice by selecting between rock, paper and scissors 
+    get a random choice by selecting between rock, paper and scissors 
 
 */
 
+
 const getComputerChoice = function()
 {
-    let choice;
     let rock = 1;
     let paper = 2;
     let scissors = 3;
@@ -16,15 +16,21 @@ const getComputerChoice = function()
 
     switch(randomChoice)
     {
-        case rock: return "Rock";
+        case rock: return "rock";
         break;
 
-        case paper: return "Paper";
+        case paper: return "paper";
         break;
 
         case scissors: return "scissors";
         break;
     }
-
 }
 
+const getHumanChoice = function()
+{
+    let choice = prompt("Choose (Rock, Paper, Scissors): ");
+    if (choice !== choice.toLowerCase()) return choice.toLowerCase();
+}
+
+console.log(getHumanChoice());
