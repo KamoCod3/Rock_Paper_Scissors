@@ -1,28 +1,5 @@
 'use strict';
 
-/*
-repeat 5 times
-    get human choice 
-    get computer choice
-    compare the choices and return the results
-    return the results
-end repeat
-
-show final score
-
-FUNCTION getHumanChoice()
-    DECLARE choice AS STRING
-    DISPLAY "Choose (rock, paper, scissors): "
-    INPUT choice
-    choice ← TOLOWER(choice)
-    RETURN choice
-END FUNCTION
-
-
-
-
-*/
-
 // Returns computer's choice randomly
 const getComputerChoice = function()
 {
