@@ -94,8 +94,6 @@ const playRound = function(humanChoice, computerChoice)
         humanScore++;
     } else {
         console.log("It's a tie!");
-        humanScore++;
-        computerScore++;
     }
     };
 
