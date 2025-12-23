@@ -51,26 +51,13 @@ const getHumanChoice = () => {
 };
 
 
-/*
-const humanSelection2 = getHumanChoice();
-const computerSelection2 = getComputerChoice();
-
-const humanSelection3 = getHumanChoice();
-const computerSelection3 = getComputerChoice();
-
-const humanSelection4 = getHumanChoice();
-const computerSelection4 = getComputerChoice();
-
-const humanSelection5 = getHumanChoice();
-const computerSelection5 = getComputerChoice();*/
-
-
 const playGame = function(){
-const playRound = function(humanChoice, computerChoice)
-{
     let humanScore = 0;
     let computerScore = 0;
     let rounds = 0;
+
+const playRound = function(humanChoice, computerChoice)
+{
     // human "rock" choice
     if (humanChoice === "rock" && computerChoice === "paper")
     {
@@ -112,16 +99,38 @@ const playRound = function(humanChoice, computerChoice)
     }
     };
 
-    console.log(`ROUND: 1`)
+    console.log(`ROUND: 1`);
     const humanSelection1 = getHumanChoice();
     const computerSelection1 = getComputerChoice();
+    console.log(`Your choice: ${humanSelection1} || Computer's choice: ${computerSelection1}`);
     playRound(humanSelection1, computerSelection1);
 
-    console.log(`ROUND: 2`)
+    console.log(`ROUND: 2`);
     const humanSelection2 = getHumanChoice();
     const computerSelection2 = getComputerChoice();
+    console.log(`Your choice: ${humanSelection2} || Computer's choice: ${computerSelection2}`);
     playRound(humanSelection2, computerSelection2);
 
+    console.log(`ROUND: 3`)
+    const humanSelection3 = getHumanChoice();
+    const computerSelection3 = getComputerChoice();
+    console.log(`Your choice: ${humanSelection3} || Computer's choice: ${computerSelection3}`);
+    playRound(humanSelection3, computerSelection3);
 
-    console.log(`Your score: ${humanScore}, Computer's Score: ${computerScore}`)
+    console.log(`ROUND: 4`);
+    const humanSelection4 = getHumanChoice();
+    const computerSelection4 = getComputerChoice();
+    console.log(`Your choice: ${humanSelection4} || Computer's choice: ${computerSelection4}`);
+    playRound(humanSelection4, computerSelection4);
+
+    console.log(`ROUND: 5`);
+    const humanSelection5 = getHumanChoice();
+    const computerSelection5 = getComputerChoice();
+    console.log(`Your choice: ${humanSelection5} || Computer's choice: ${computerSelection5}`);
+    playRound(humanSelection5, computerSelection5);
+
+
+    console.log(`Your score: ${humanScore}, Computer's Score: ${computerScore}`);
 };
+
+playGame();
