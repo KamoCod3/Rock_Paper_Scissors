@@ -1,13 +1,27 @@
 'use strict';
 
 /*
-make a function to generate computer choice "getComputerChoice"
-    get a random choice by selecting between rock, paper and scissors 
+repeat 5 times
+    get human choice 
+    get computer choice
+    compare the choices and return the results
+    return the results
+end repeat
+
+show final score
+
+FUNCTION getHumanChoice()
+    DECLARE choice AS STRING
+    DISPLAY "Choose (rock, paper, scissors): "
+    INPUT choice
+    choice ← TOLOWER(choice)
+    RETURN choice
+END FUNCTION
+
+
+
 
 */
-
-let humanScore = 0;
-let computerScore = 0;
 
 // Returns computer's choice randomly
 const getComputerChoice = function()
@@ -33,11 +47,30 @@ const getComputerChoice = function()
 // Allows the user to make a choice
 const getHumanChoice = () => {
     let choice = prompt("Choose (Rock, Paper, Scissors): ");
-    if (choice !== choice.toLowerCase()) return choice.toLowerCase(); // makes the user input consistent
+    return choice.toLowerCase(); // makes the user input consistent
 };
 
+
+/*
+const humanSelection2 = getHumanChoice();
+const computerSelection2 = getComputerChoice();
+
+const humanSelection3 = getHumanChoice();
+const computerSelection3 = getComputerChoice();
+
+const humanSelection4 = getHumanChoice();
+const computerSelection4 = getComputerChoice();
+
+const humanSelection5 = getHumanChoice();
+const computerSelection5 = getComputerChoice();*/
+
+
+const playGame = function(){
 const playRound = function(humanChoice, computerChoice)
 {
+    let humanScore = 0;
+    let computerScore = 0;
+    let rounds = 0;
     // human "rock" choice
     if (humanChoice === "rock" && computerChoice === "paper")
     {
@@ -77,11 +110,18 @@ const playRound = function(humanChoice, computerChoice)
         humanScore++;
         computerScore++;
     }
+    };
+
+    console.log(`ROUND: 1`)
+    const humanSelection1 = getHumanChoice();
+    const computerSelection1 = getComputerChoice();
+    playRound(humanSelection1, computerSelection1);
+
+    console.log(`ROUND: 2`)
+    const humanSelection2 = getHumanChoice();
+    const computerSelection2 = getComputerChoice();
+    playRound(humanSelection2, computerSelection2);
+
+
+    console.log(`Your score: ${humanScore}, Computer's Score: ${computerScore}`)
 };
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-const playGame = callBack => {
-    playRound(humanSelection, computerSelection);
-}
